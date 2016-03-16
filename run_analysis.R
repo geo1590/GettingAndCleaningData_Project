@@ -104,6 +104,7 @@ my_func1 <- function(x) {
     my_data <- data.table(my_data)
     my_tidy_data <- aggregate(. ~subject_number + activity_label, my_data, mean)
     my_tidy_data <- my_tidy_data[order(my_tidy_data$subject_number, my_tidy_data$activity_label),]
+    write.table(my_tidy_data, 'my_tidy_data.txt', row.names=FALSE)
      
 }
 
