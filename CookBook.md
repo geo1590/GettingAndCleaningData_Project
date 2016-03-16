@@ -1,24 +1,23 @@
 # This Code Book explains all data/variables.
 
-## Data files
+#### Data files
 * Data files found in the ZIP file.
-y_train.txt		- Activity number for 'train' dataset. Values 1-6. It has 7352 rows.
-y_test.txt		- Activity number for 'test' dataset. Values 1-6. It has 2947 rows.
+* y_train.txt		- Activity number for 'train' dataset. Values 1-6. It has 7352 rows.
+* y_test.txt		- Activity number for 'test' dataset. Values 1-6. It has 2947 rows.
 
-X_train.txt		- Data measurement for 'train' dataset. It has 561 columns per row. It has 7352 rows.
-X_test.txt		- Data measurement for 'test' dataset. It has 561 columns per row. It has 2947 rows.
+* X_train.txt		- Data measurement for 'train' dataset. It has 561 columns per row. It has 7352 rows.
+* X_test.txt		- Data measurement for 'test' dataset. It has 561 columns per row. It has 2947 rows.
 
-subject_train.txt	- Subject (person) number for the 'train' dataset. Values 1-30. It has 7352 rows.
-subject_test.txt	- Subject (person) number for the 'test' dataset. Values 1-30. It has 2947 rows.
+* subject_train.txt	- Subject (person) number for the 'train' dataset. Values 1-30. It has 7352 rows.
+* subject_test.txt	- Subject (person) number for the 'test' dataset. Values 1-30. It has 2947 rows.
 
 -------------
 
-activity_labels.txt	- Value/String pairs. Values 1-6. This can be used to convert activity number to activity label. It has 6 rows.
+* activity_labels.txt	- Value/String pairs. Values 1-6. This can be used to convert activity number to activity label. It has 6 rows.
 
-features.txt		- It has 561 rows of value (1-156) and string pairs. The string is the measurement description string.
+* features.txt		- It has 561 rows of value (1-156) and string pairs. The string is the measurement description string.
 
-features_info.txt	- Explanation of what the descriptive strings mean in features.txt.
-
+* features_info.txt	- Explanation of what the descriptive strings mean in features.txt.
 
 * The above data files can be downloaded from:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -30,7 +29,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 
 
-## Variables in run_analysis.R script file.
+#### Variables in run_analysis.R script file.
 * These variables are assigned to the files path/filename.
     file1, file2, file3, file4, file5, file6, file7, file8
 
