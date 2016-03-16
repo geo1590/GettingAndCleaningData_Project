@@ -82,7 +82,8 @@ Since we only want the measurements that calculate the mean or standard deviatio
     my_data <- my_data[,c(1, 2, grep("-mean[(][)]|-std[(][)]", names(my_data)))]
 ```
 
-## Rename some column names with more descriptive text.
+#### Rename some column names with more descriptive text.
+Some of the column names can be renamed to give a more descriptive meaning. To do this, a search & replace function is used on the data sets column names and then reassigned back.
 ```{r}
     names(my_data) <- gsub("Acc", "Accelerometer", names(my_data))
     names(my_data) <- gsub("-mean()", "Mean", names(my_data))
@@ -95,7 +96,8 @@ Since we only want the measurements that calculate the mean or standard deviatio
     names(my_data) <- gsub("Mag", "Magnitude", names(my_data))
 ```
 
-## Create a separate data set that is tidy with the average measurement for each activity and each subject.
+#### Create a separate data set that is tidy with the average measurement for each activity and each subject.
+The mean for each column measurement must be calculated grouped by activity labels and subject numbers. To do this, the data.table() is used.
 ```{r}
     my_data$subject_number <- as.factor(my_data$subject_number)
     my_data <- data.table(my_data)
