@@ -2,7 +2,8 @@
 # Analysis of the run_analysis.R script.
 
 ### Load libraries
-testing123
+#### testing123
+These are needed for the script to run.
 ```{r}
     library(data.table)
     library(dplyr)
