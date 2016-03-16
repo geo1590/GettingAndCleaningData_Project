@@ -105,7 +105,10 @@ The mean for each column measurement must be calculated grouped by activity labe
     my_tidy_data <- my_tidy_data[order(my_tidy_data$subject_number, my_tidy_data$activity_label),]
 ```
 
-
+#### Write the tidy data set to a text file and leave out the row names.
+```{r}
+write.table(my_tidy_data, 'my_tidy_data.txt', row.names=FALSE)
+```
 
 
 
