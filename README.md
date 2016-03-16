@@ -62,13 +62,13 @@ The activity values are integers denoting the activity performed. The subject va
     my_data <- cbind(my_activity_values, my_subject_values, my_data)
 ```
 
-## Replace activity values with more descriptive activity labels.
+#### Replace activity values with more descriptive activity labels.
 The activity label's first column is the activity value (integer) and second column is the activity label being performed. This can be used to substitute an activity value with a more descriptive activity label (text).
 ```{r}
     my_data[,1] <- my_activity_labels[my_data[,1], 2]
 ```
 
-## Add the activity label and subject number to the merged data set's column names.
+#### Add the activity label and subject number to the merged data set's column names.
 The activity label and subject number are add as column one and two to the data set. They have the same number of rows as the data set.
 ```{r}
     my_colnames <- as.character(my_features_labels$V2)
@@ -76,7 +76,7 @@ The activity label and subject number are add as column one and two to the data 
     colnames(my_data) <- my_colnames
 ```
 
-## Extract/use only the columns that use mean and standard deviation.
+#### Extract/use only the columns that use mean and standard deviation.
 Since we only want the measurements that calculate the mean or standard deviation, we extract those columns and leave out the rest, but include the activity label and subject number columns.
 ```{r}
     my_data <- my_data[,c(1, 2, grep("-mean[(][)]|-std[(][)]", names(my_data)))]
